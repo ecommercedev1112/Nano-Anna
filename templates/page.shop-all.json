@@ -1,0 +1,174 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "1d381b22-0fe2-47b1-bdaa-184c9852cf95": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div\n  class=\"facets-outer-container\"\n>\n  <aside\n    aria-labelledby=\"verticalTitle\"\n    class=\"facets-wrapper\"\n    id=\"main-collection-filters\"\n    data-id=\"{{ section.id }}\"\n  >\n    <button id=\"menu-button\" class=\"link large-up-hide\">Collections<\/button>\n    <div\n      id=\"collections-menu\"\n      class=\"collections-menu-drawer-container collections-menu\"\n    >\n      <div class=\"collections-menu-drawer__inner-container\">\n        <div class=\"collections-menu-drawer__close-container large-up-hide\">\n          <h4>Collections<\/h4>\n          <span id=\"close-button\" class=\"close-btn\">\n            {% render 'icon-close' %}\n          <\/span>\n        <\/div>\n        <div\n          id=\"collections-menu-drawer\"\n          class=\"gradient collections-menu-drawer motion-reduce color-background-1\"\n        >\n          <ul id=\"menu-list\" class=\"list-menu list-menu--inline\" role=\"list\">\n            {% for link in linklists['collections-menu'].links -%}\n            <li {% if link.active %} class=\"li__menu-item--active\" {% endif %}>\n              {{ link.title | link_to: link.url, class: 'header__menu-item\n              list-menu__item link link--text focus-inset' }}\n            <\/li>\n            {%- endfor %}\n          <\/ul>\n        <\/div>\n      <\/div>\n    <\/div>\n  <\/aside>\n<\/div>",
+        "color_scheme": "",
+        "advanced_styling": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "d930916b-5b61-4d96-b7b4-61c30b2b9690": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16696360501485__d930916b-5b61-4d96-b7b4-61c30b2b9690-1685611377d6bd3022-1": {
+          "type": "text",
+          "settings": {
+            "text": "<h1>Explore our <em>jewelry collection<\/em><\/h1>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16696360501485__d930916b-5b61-4d96-b7b4-61c30b2b9690-1685611377d6bd3022-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "advanced_styling": "cta-text",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "6988435d-a514-4adb-9279-1b1c99ae5ef8": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "{{ section.settings.collection.title }}",
+        "hd_title_h1": true,
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "earrings",
+        "products_to_show": 6,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "link",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "advanced_styling": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "c5ef6b37-e2c4-4fba-9a1d-fd0c4da738e9": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "{{ section.settings.collection.title }}",
+        "hd_title_h1": false,
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "rings",
+        "products_to_show": 6,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "link",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "advanced_styling": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "68af685e-4093-4b5a-8036-1d6cd34d0969": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "{{ section.settings.collection.title }}",
+        "hd_title_h1": false,
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all-necklaces",
+        "products_to_show": 6,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "link",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "advanced_styling": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "19aba1bf-9581-491d-8d94-d7d507804550": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "{{ section.settings.collection.title }}",
+        "hd_title_h1": false,
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "bracelets",
+        "products_to_show": 6,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "link",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "advanced_styling": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1d381b22-0fe2-47b1-bdaa-184c9852cf95",
+    "d930916b-5b61-4d96-b7b4-61c30b2b9690",
+    "6988435d-a514-4adb-9279-1b1c99ae5ef8",
+    "c5ef6b37-e2c4-4fba-9a1d-fd0c4da738e9",
+    "68af685e-4093-4b5a-8036-1d6cd34d0969",
+    "19aba1bf-9581-491d-8d94-d7d507804550"
+  ]
+}

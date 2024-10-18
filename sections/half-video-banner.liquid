@@ -1,0 +1,473 @@
+<style>
+  .hv-holder {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: stretch;
+    position: relative;
+
+  }
+
+  #muxHalfVideo {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  a:has(>.hv-image),
+  .hv-vid {
+    padding-top: 7.5px;
+    padding-right: 15px;
+    padding-bottom: 7.5px;
+    padding-left: 15px;
+    aspect-ratio: 197/177;
+    width: 100%;
+  }
+
+  .hv-image {
+    display: block !important;
+    height: 100%;
+    position: relative;
+    min-height: 100%;
+    min-width: 50%;
+    background-size: cover;
+    background-color: #a399a8;
+  }
+
+
+  .hv-holder .hv-vid {
+    background-size: cover;
+    {% comment %} aspect-ratio: 1; {% endcomment %}
+    overflow: hidden;
+    {% if section.settings.image_2 %}
+    background-image: url({{ section.settings.image_2 | image_url: width: 1920 }})
+    {% endif %}
+  }
+
+  .hv-holder .hv-vid video {
+    width: 100%;
+    height: auto;
+  }
+
+  @media(min-width: 768px) {
+    a:has(>.hv-image),
+  .hv-vid {
+  padding: 0;
+  }
+     .hv-holder {
+      aspect-ratio: 2/0.9;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  {% unless section.settings.image_mobile %}
+    .hv-image {
+      background-image: url({{ section.settings.image | image_url: width: 3840 }});
+    }
+  {% else %}
+    .hv-image {
+      background-image: url({{ section.settings.image_mobile | image_url: width: 3840 }});
+    }
+    @media (min-width: 990px) {
+      .hv-image {
+        background-image: url({{ section.settings.image | image_url: width: 3840 }});
+      }
+    }
+  {% endunless %}
+
+  @media(max-width: 767px) {
+    .hv-holder .hv-vid {
+      background-image: none;
+    }
+  }
+</style>
+
+<script src="https://unpkg.com/@mux/mux-video"></script>
+
+<div class="hv-holder">
+  <a
+    {% if section.settings.button_link == blank %}
+      role="link" aria-disabled="true"
+    {% else %}
+      href="{{ section.settings.button_link }}"
+    {% endif %}
+  >
+    <div
+      class="hv-image"
+    ></div>
+  </a>
+
+  {% if section.settings.button_link_2 -%}
+    <a href="{{ section.settings.button_link_2 }}" style="display: contents">
+  {%- endif %}
+ <div class="hv-vid">
+  {{ section.settings.video | video_tag: autoplay: 'autoplay', loop: 'loop', muted: 'muted' }}
+</div>
+
+  {% if section.settings.button_link %}</a>{% endif %}
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const videoEl = document.querySelector('.hv-vid video');
+
+  if (videoEl) {
+    console.log(videoEl);
+
+    // Autoplay is generally allowed if the video is muted
+    videoEl.muted = true;
+
+    videoEl.play()
+      .then(function () {
+        console.log('Autoplay was successful!');
+      })
+      .catch(function (error) {
+        console.log('Autoplay error:', error);
+      });
+  } else {
+    console.log('Video element not found!');
+  }
+});
+
+</script>
+
+{% schema %}
+{
+  "name": "half-video-banner",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.half-video-banner.settings.image.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "t:sections.half-video-banner.settings.image_mobile.label"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "t:sections.half-video-banner.settings.button_link.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "t:sections.half-video-banner.settings.image_2.label"
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "Secondary video"
+    },
+    {
+      "type": "url",
+      "id": "button_link_2",
+      "label": "t:sections.half-video-banner.settings.button_link_2.label"
+    },
+    {
+      "type": "range",
+      "id": "image_overlay_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "%",
+      "label": "t:sections.half-video-banner.settings.image_overlay_opacity.label",
+      "default": 0
+    },
+    {
+      "type": "select",
+      "id": "image_height",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "t:sections.half-video-banner.settings.image_height.options__1.label"
+        },
+        {
+          "value": "small",
+          "label": "t:sections.half-video-banner.settings.image_height.options__2.label"
+        },
+        {
+          "value": "medium",
+          "label": "t:sections.half-video-banner.settings.image_height.options__3.label"
+        },
+        {
+          "value": "large",
+          "label": "t:sections.half-video-banner.settings.image_height.options__4.label"
+        }
+      ],
+      "default": "medium",
+      "label": "t:sections.half-video-banner.settings.image_height.label",
+      "info": "t:sections.half-video-banner.settings.image_height.info"
+    },
+    {
+      "type": "select",
+      "id": "desktop_content_position",
+      "options": [
+        {
+          "value": "top-left",
+          "label": "t:sections.half-video-banner.settings.desktop_content_position.options__1.label"
+        },
+        {
+          "value": "top-center",
+          "label": "t:sections.half-video-banner.settings.desktop_content_position.options__2.label"
+        },
+        {
+          "value": "top-right",
+          "label": "t:sections.half-video-banner.settings.desktop_content_position.options__3.label"
+        },
+        {
+          "value": "middle-left",
+          "label": "t:sections.half-video-banner.settings.desktop_content_position.options__4.label"
+        },
+        {
+          "value": "middle-center",
+          "label": "t:sections.half-video-banner.settings.desktop_content_position.options__5.label"
+        },
+        {
+          "value": "middle-right",
+          "label": "t:sections.half-video-banner.settings.desktop_content_position.options__6.label"
+        },
+        {
+          "value": "bottom-left",
+          "label": "t:sections.half-video-banner.settings.desktop_content_position.options__7.label"
+        },
+        {
+          "value": "bottom-center",
+          "label": "t:sections.half-video-banner.settings.desktop_content_position.options__8.label"
+        },
+        {
+          "value": "bottom-right",
+          "label": "t:sections.half-video-banner.settings.desktop_content_position.options__9.label"
+        }
+      ],
+      "default": "middle-center",
+      "label": "t:sections.half-video-banner.settings.desktop_content_position.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_text_box",
+      "default": true,
+      "label": "t:sections.half-video-banner.settings.show_text_box.label"
+    },
+    {
+      "type": "select",
+      "id": "desktop_content_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.half-video-banner.settings.desktop_content_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.half-video-banner.settings.desktop_content_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.half-video-banner.settings.desktop_content_alignment.options__3.label"
+        }
+      ],
+      "default": "center",
+      "label": "t:sections.half-video-banner.settings.desktop_content_alignment.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "info": "t:sections.half-video-banner.settings.color_scheme.info",
+      "default": "background-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.animation.content"
+    },
+    {
+      "type": "select",
+      "id": "image_behavior",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:sections.all.animation.image_behavior.options__1.label"
+        },
+        {
+          "value": "ambient",
+          "label": "t:sections.all.animation.image_behavior.options__2.label"
+        },
+        {
+          "value": "fixed",
+          "label": "t:sections.all.animation.image_behavior.options__3.label"
+        }
+      ],
+      "default": "none",
+      "label": "t:sections.all.animation.image_behavior.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.half-video-banner.settings.mobile.content"
+    },
+    {
+      "type": "select",
+      "id": "mobile_content_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.half-video-banner.settings.mobile_content_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.half-video-banner.settings.mobile_content_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.half-video-banner.settings.mobile_content_alignment.options__3.label"
+        }
+      ],
+      "default": "center",
+      "label": "t:sections.half-video-banner.settings.mobile_content_alignment.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "stack_images_on_mobile",
+      "default": true,
+      "label": "t:sections.half-video-banner.settings.stack_images_on_mobile.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_text_below",
+      "default": true,
+      "label": "t:sections.half-video-banner.settings.show_text_below.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "t:sections.half-video-banner.blocks.heading.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "default": "Image banner",
+          "label": "t:sections.half-video-banner.blocks.heading.settings.heading.label"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            {
+              "value": "h2",
+              "label": "t:sections.all.heading_size.options__1.label"
+            },
+            {
+              "value": "h1",
+              "label": "t:sections.all.heading_size.options__2.label"
+            },
+            {
+              "value": "h0",
+              "label": "t:sections.all.heading_size.options__3.label"
+            }
+          ],
+          "default": "h1",
+          "label": "t:sections.all.heading_size.label"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "t:sections.half-video-banner.blocks.text.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "text",
+          "default": "Give customers details about the banner image(s) or content on the template.",
+          "label": "t:sections.half-video-banner.blocks.text.settings.text.label"
+        },
+        {
+          "type": "select",
+          "id": "text_style",
+          "options": [
+            {
+              "value": "body",
+              "label": "t:sections.half-video-banner.blocks.text.settings.text_style.options__1.label"
+            },
+            {
+              "value": "subtitle",
+              "label": "t:sections.half-video-banner.blocks.text.settings.text_style.options__2.label"
+            },
+            {
+              "value": "caption-with-letter-spacing",
+              "label": "t:sections.half-video-banner.blocks.text.settings.text_style.options__3.label"
+            }
+          ],
+          "default": "body",
+          "label": "t:sections.half-video-banner.blocks.text.settings.text_style.label"
+        }
+      ]
+    },
+    {
+      "type": "buttons",
+      "name": "t:sections.half-video-banner.blocks.buttons.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_label_1",
+          "default": "Button label",
+          "label": "t:sections.half-video-banner.blocks.buttons.settings.button_label_1.label",
+          "info": "t:sections.half-video-banner.blocks.buttons.settings.button_label_1.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link_1",
+          "label": "t:sections.half-video-banner.blocks.buttons.settings.button_link_1.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary_1",
+          "default": false,
+          "label": "t:sections.half-video-banner.blocks.buttons.settings.button_style_secondary_1.label"
+        },
+        {
+          "type": "text",
+          "id": "button_label_2",
+          "default": "Button label",
+          "label": "t:sections.half-video-banner.blocks.buttons.settings.button_label_2.label",
+          "info": "t:sections.half-video-banner.blocks.buttons.settings.button_label_2.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link_2",
+          "label": "t:sections.half-video-banner.blocks.buttons.settings.button_link_2.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary_2",
+          "default": false,
+          "label": "t:sections.half-video-banner.blocks.buttons.settings.button_style_secondary_2.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "half-video-banner",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+          "type": "text"
+        },
+        {
+          "type": "buttons"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

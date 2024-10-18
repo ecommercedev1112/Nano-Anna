@@ -1,0 +1,203 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "bcb87672-1a24-493f-b785-c72e9b8a108d": {
+      "type": "image-banner",
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/image_33.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "advanced_styling": ""
+      }
+    },
+    "6f71a640-ae03-4882-8742-e5ba3e5519bf": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--16696334909677__6f71a640-ae03-4882-8742-e5ba3e5519bf-1685606608a727f1b9-0": {
+          "type": "column",
+          "settings": {
+            "title": "Anna Zuckerman",
+            "text": "<p>From childhood, Anna Zuckerman has been mesmerized by the beauty of the gemstone; the color, the cut, and the brilliant sparkle give her the power to imagine its potential. Growing up, she carefully observed and assisted her father at his gold smithing business, where he created bespoke jewelry out of the finest diamonds and gems for select clientele. Infatuated with the craft, she formally trained through courses in metals, where she learned the intricacies of the technical process, as well as certification with the Gemological Institute of America.<\/p><p>Through opening a small fine jewelry boutique focusing on diamonds, she learned that most of her clientele was limited to buying these pieces just once in a lifetime. Feeling that the world was underdelivered by the jewelry industry to serve these clients, Anna became determined to recreate the look and feel of affordable luxury, re-defining what a demi-fine jewelry collection could be, with colorful gems as its focus, bringing bold statement and wearability to her customers.<\/p><p>With her deep knowledge of <a href=\"\/collections\/all-products-collection\" title=\"All Products\">jewelry<\/a> design as well as years of experience traveling the globe to collaborate with gem growers and cutters to understand emerging techniques and manufacturing capabilities, Anna mastered a unique process of production for her collection, using cutting-edge technology and ethical sourcing practices to create beautiful yet sustainability-focused pieces. Through repurposing salvaged lab-grown diamond and gem materials that would otherwise go to waste, she creates new beauty while extending the life cycle of already existing materials - saving further ecological damage and destruction.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--16696334909677__6f71a640-ae03-4882-8742-e5ba3e5519bf-1685606608a727f1b9-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/252.INSTAGRAM.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16696334909677__6f71a640-ae03-4882-8742-e5ba3e5519bf-1685606608a727f1b9-0",
+        "template--16696334909677__6f71a640-ae03-4882-8742-e5ba3e5519bf-1685606608a727f1b9-1"
+      ],
+      "settings": {
+        "title": "About",
+        "multi_title_h1": true,
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "portrait",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "advanced_styling": "section-multicolumn-about",
+        "padding_top": 88,
+        "padding_bottom": 36
+      }
+    },
+    "fed325d5-07df-41e2-ab13-e00511478826": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/AnnaZuckerman.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false,
+        "advanced_styling": "banner-contained"
+      }
+    },
+    "7e8c59d2-f490-43cc-9a85-5a8001628770": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16696334909677__7e8c59d2-f490-43cc-9a85-5a8001628770-168560686086ae94ed-1": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
+        },
+        "302cfb44-de93-4c85-be6d-3f4764357db2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Anna designs each piece around its unique gemstone, inspired by its journey and possibilities; starting with the stone as a focal point, she creates a silhouette that deliberately serves to preserve and brilliantly display its beauty. For her, jewelry is not only an expression of its wearer, but a purposeful and deserved luxury not meant to be saved but rather celebrated every day.<\/p><h3><em>Life should be lived boldly, embracing power and strength, shining, and finding beauty in daily dressing. My collection reflects its wearer - never afraid to make a statement; bright, colorful, and confident.<\/em><\/h3><h3><strong>ANNA ZUCKERMAN<\/strong><\/h3>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16696334909677__7e8c59d2-f490-43cc-9a85-5a8001628770-168560686086ae94ed-1",
+        "302cfb44-de93-4c85-be6d-3f4764357db2"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "advanced_styling": "mw-400",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "dec23454-b403-4d73-b3f4-8ce0c4b3f819": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16696334909677__dec23454-b403-4d73-b3f4-8ce0c4b3f819-1685608442037ecd57-1": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Explore our<em> jewelry collection<\/em><\/h2>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16696334909677__dec23454-b403-4d73-b3f4-8ce0c4b3f819-1685608442037ecd57-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "advanced_styling": "cta-text",
+        "padding_top": 40,
+        "padding_bottom": 20
+      }
+    },
+    "64b58857-8ebc-45af-8747-1459fd840e08": {
+      "type": "collection-list",
+      "blocks": {
+        "template--16696334909677__64b58857-8ebc-45af-8747-1459fd840e08-168560810084010091-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "rings"
+          }
+        },
+        "c27460f6-65ac-4658-9d39-3293d046a077": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "earrings"
+          }
+        },
+        "template--16696334909677__64b58857-8ebc-45af-8747-1459fd840e08-168560810084010091-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bracelets"
+          }
+        },
+        "template--16696334909677__64b58857-8ebc-45af-8747-1459fd840e08-168560810084010091-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "all-necklaces"
+          }
+        }
+      },
+      "block_order": [
+        "template--16696334909677__64b58857-8ebc-45af-8747-1459fd840e08-168560810084010091-0",
+        "c27460f6-65ac-4658-9d39-3293d046a077",
+        "template--16696334909677__64b58857-8ebc-45af-8747-1459fd840e08-168560810084010091-1",
+        "template--16696334909677__64b58857-8ebc-45af-8747-1459fd840e08-168560810084010091-2"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_ratio": "portrait",
+        "columns_desktop": 4,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "advanced_styling": "",
+        "padding_top": 36,
+        "padding_bottom": 40
+      }
+    }
+  },
+  "order": [
+    "main",
+    "bcb87672-1a24-493f-b785-c72e9b8a108d",
+    "6f71a640-ae03-4882-8742-e5ba3e5519bf",
+    "fed325d5-07df-41e2-ab13-e00511478826",
+    "7e8c59d2-f490-43cc-9a85-5a8001628770",
+    "dec23454-b403-4d73-b3f4-8ce0c4b3f819",
+    "64b58857-8ebc-45af-8747-1459fd840e08"
+  ]
+}

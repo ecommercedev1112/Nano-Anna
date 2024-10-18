@@ -1,0 +1,121 @@
+<script src="https://unpkg.com/@mux/mux-video"></script>
+
+<div class="mux-intro-video mux-intro-closed">
+  <mux-video
+    id="muxIntroVideo"
+    autoplay
+    loop
+    muted
+    playsinline
+    playback-id="1KXAU8AeutIpy4OjD71ANKgmzdqx5Dn8MsOcm01m59nU"
+  >
+  </mux-video>
+
+  <div class="mux-bottom-holder">
+    <a href="#" class="mux-button">Enter the site</a>
+  </div>
+</div>
+<style>
+    .mux-intro-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+    .mux-intro-closed {
+        display:none !important;
+    }
+    #muxIntroVideo {
+      width: 100vw;
+      {% comment %} margin-left: -50%; {% endcomment %}
+      height: 100vh;
+      top: 0;
+    }
+    .mux-bottom-holder {
+    position:fixed;
+    z-index: 99999;
+    bottom:40px;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    }
+    .mux-button {
+      text-decoration:none;
+      text-align:center;
+      text-transform: uppercase;
+      font-family: 'GT America Extended', sans-serif;
+      text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      color:#fff;
+      cursor:pointer !important;
+      transition:all 1.3s ease;
+    }
+    .mux-button:hover {
+    opacity:0.87;
+    transform:scale(1.1);
+  }
+</style>
+<script>
+  var videoSeenCookie = getCookie('introVideo');
+  const muxButton = document.querySelector('.mux-button');
+  if (videoSeenCookie !== 'seen') {
+    document.querySelector('.mux-intro-video').classList.remove('mux-intro-closed');
+    const muxVideoEl = document.querySelector('mux-video');
+    document.cookie = `introVideo=seen; path=/; max-age=${60 * 60 * 24 * 14};`;
+
+    muxVideoEl
+      .play()
+      .then(function () {
+        console.log('autoplay was successful!');
+        setCloseTimer();
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
+  muxButton.addEventListener(
+    'click',
+    function () {
+      closeMuxVideo();
+    },
+    false
+  );
+
+  function closeMuxVideo() {
+    const muxVideoEl = document.querySelector('.mux-intro-video');
+    muxVideoEl.classList.add('mux-intro-closed');
+  }
+
+  function setCloseTimer() {
+    setTimeout(closeMuxVideo, 32000);
+  }
+
+  function getCookie(name) {
+    let value = `; ${document.cookie}`;
+    let parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+  }
+</script>
+
+{% schema %}
+{
+  "name": "MuxVideoPreloader",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [],
+  "presets": [
+    {
+      "name": "MuxVideoPreloader"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,91 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "7eddcd5d-c72c-4a22-ac9e-0db73d820cd3": {
+      "type": "featured-collection-gallery",
+      "settings": {
+        "gallery_style_type": "style-3",
+        "gallery_style_direction": "normal",
+        "featured_image": "shopify:\/\/shop_images\/Look-12_1578-Enhanced-NR.jpg",
+        "title": "Modern Bridal",
+        "title_hd_h1": true,
+        "heading_size": "h0",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "button_label": "Shop the collection",
+        "button_link": "",
+        "collection": "modern-bridal",
+        "products_to_show": 6,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_label": "Shop the looks",
+        "view_all_link": "",
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-ed206ae2-68bd-4bc9-83b3-b7c1a903c8ad",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "advanced_styling": "",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "663e89fd-e91d-4726-abba-18d4cce898de": {
+      "type": "featured-collection-gallery",
+      "settings": {
+        "gallery_style_type": "style-3",
+        "gallery_style_direction": "reversed",
+        "featured_image": "shopify:\/\/shop_images\/Look-13_1820-Enhanced-NR.jpg",
+        "title": "Something Blue",
+        "title_hd_h1": false,
+        "heading_size": "h0",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "button_label": "Shop the collection",
+        "button_link": "",
+        "collection": "something-blue",
+        "products_to_show": 4,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_label": "Shop the looks",
+        "view_all_link": "",
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-ed206ae2-68bd-4bc9-83b3-b7c1a903c8ad",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "advanced_styling": "",
+        "padding_top": 0,
+        "padding_bottom": 32
+      }
+    }
+  },
+  "order": [
+    "main",
+    "7eddcd5d-c72c-4a22-ac9e-0db73d820cd3",
+    "663e89fd-e91d-4726-abba-18d4cce898de"
+  ]
+}

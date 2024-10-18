@@ -1,0 +1,300 @@
+<product-recommendations
+  class="complementary-products quick-add-hidden no-js-hidden style-2 direction-normal{% if section.settings.enable_quick_add %} complementary-products-contains-quick-add{% endif %}"
+  data-url="{{ routes.product_recommendations_url }}?section_id=complementary-products&product_id={{ product.id }}&limit={{ section.settings.product_list_limit }}&intent=complementary"
+>
+  {%- if recommendations.performed and recommendations.products_count > 0 -%}
+    <aside
+      class="collection-gallery complementary-gallery"
+      aria-label="{{ 'accessibility.complementary_products' | t }}"
+      {{ block.shopify_attributes -}}
+    >
+      <div class="collection-gallery-content complementary-gallery-image">
+        <div>
+          {% assign looks = shop.metaobjects.looks.values %}
+          {% for look in looks %}
+            {% assign look_image = look.image.value %}
+            {%- if look_image != blank -%}
+              <img
+                srcset="
+                  {%- if look_image.width >= 375 -%}{{ look_image | image_url: width: 375 }} 375w,{%- endif -%}
+                  {%- if look_image.width >= 750 -%}{{ look_image | image_url: width: 750 }} 750w,{%- endif -%}
+                  {%- if look_image.width >= 1100 -%}{{ look_image | image_url: width: 1100 }} 1100w,{%- endif -%}
+                  {%- if look_image.width >= 1500 -%}{{ look_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                  {%- if look_image.width >= 1780 -%}{{ look_image | image_url: width: 1780 }} 1780w,{%- endif -%}
+                  {%- if look_image.width >= 2000 -%}{{ look_image | image_url: width: 2000 }} 2000w,{%- endif -%}
+                  {%- if look_image.width >= 3000 -%}{{ look_image | image_url: width: 3000 }} 3000w,{%- endif -%}
+                  {%- if look_image.width >= 3840 -%}{{ look_image | image_url: width: 3840 }} 3840w,{%- endif -%}
+                  {{ look_image | image_url }} {{ look_image.width }}w
+                "
+                sizes="100vw"
+                src="{{ look_image | image_url: width: 1500 }}"
+                loading="lazy"
+                alt="{{ look_image.alt | escape }}"
+                width="{{ look_image.width }}"
+                height="{{ look_image.width | divided_by: look_image.aspect_ratio }}"
+              >
+            {%- endif -%}
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="complementary-gallery-content complementary-products__container">
+        <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width summary__title">
+          <h2 class="h3 accordion__title">{{ section.settings.block_heading }}</h2>
+        </div>
+        <slider-component>
+          <ul
+            id="Slider-{{ section.id }}"
+            class="grid product-grid contains-card contains-card--product{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid--{{ section.settings.columns_desktop }}-col-desktop{% if section.settings.collection == blank %} grid--2-col-tablet-down{% else %} grid--{{ section.settings.columns_mobile }}-col-tablet-down{% endif %}{% if show_mobile_slider or show_desktop_slider %} slider{% if show_desktop_slider %} slider--desktop{% endif %}{% if show_mobile_slider %} slider--tablet grid--peek{% endif %}{% endif %}"
+            role="list"
+            aria-label="{{ 'general.slider.name' | t }}"
+          >
+            {%- for product in recommendations.products limit: section.settings.product_list_limit -%}
+              <li
+                id="Slide-{{ section.id }}-{{ forloop.index }}"
+                class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                {% if settings.animations_reveal_on_scroll %}
+                  data-cascade
+                  style="--animation-order: {{ forloop.index }};"
+                {% endif %}
+              >
+                {% render 'card-product',
+                  card_product: product,
+                  media_aspect_ratio: section.settings.image_ratio,
+                  show_secondary_image: false,
+                  lazy_load: false,
+                  show_quick_add: section.settings.enable_quick_add,
+                  section_id: section.id,
+                  horizontal_class: false,
+                  horizontal_quick_add: true
+                %}
+              </li>
+            {%- endfor -%}
+          </ul>
+          <div class="slider-buttons no-js-hidden">
+            <button
+              type="button"
+              class="slider-button slider-button--prev"
+              name="previous"
+              aria-label="{{ 'general.slider.previous_slide' | t }}"
+              aria-controls="Slider-{{ section.id }}"
+            >
+              {%- if section.settings.gallery_style_type == 'style-1' -%}
+                {% render 'icon-arrow' %}
+              {% else %}
+                {% render 'icon-caret' %}
+              {% endif %}
+            </button>
+            <div class="slider-counter caption">
+              <span class="slider-counter--current">1</span>
+              <span aria-hidden="true"> / </span>
+              <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+              <span class="slider-counter--total">{{ products_to_display }}</span>
+            </div>
+            <button
+              type="button"
+              class="slider-button slider-button--next"
+              name="next"
+              aria-label="{{ 'general.slider.next_slide' | t }}"
+              aria-controls="Slider-{{ section.id }}"
+            >
+              {%- if section.settings.gallery_style_type == 'style-1' -%}
+                {% render 'icon-arrow' %}
+              {% else %}
+                {% render 'icon-caret' %}
+              {% endif %}
+            </button>
+          </div>
+        </slider-component>
+
+        <slideshow-component class="slider-mobile-gutter">
+          {%- assign number_of_slides = recommendations.products_count
+            | plus: 0.0
+            | divided_by: section.settings.products_per_page
+            | ceil
+          -%}
+          <div
+            id="Slider-{{ section.id }}"
+            class="contains-card contains-card--product complementary-slider grid grid--1-col slider slider--everywhere"
+            role="list"
+            {% if number_of_slides > 1 %}
+              aria-label="{{ 'general.slider.name' | t }}"
+            {% endif %}
+          >
+            {%- for i in (1..number_of_slides) -%}
+              <div
+                id="Slide-{{ section.id }}-{{ forloop.index }}"
+                class="complementary-slide complementary-slide--{{ settings.card_style }} grid__item slider__slide slideshow__slide"
+                tabindex="-1"
+                role="group"
+                {% if number_of_slides > 1 %}
+                  aria-roledescription="{{ 'sections.slideshow.slide' | t }}"
+                  aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+                {% endif %}
+              >
+                <ul class="list-unstyled" role="list">
+                  {%- for product in recommendations.products
+                    limit: section.settings.products_per_page
+                    offset: continue
+                  -%}
+                    <li>
+                      {% render 'card-product',
+                        card_product: product,
+                        media_aspect_ratio: section.settings.image_ratio,
+                        show_secondary_image: false,
+                        lazy_load: false,
+                        show_quick_add: section.settings.enable_quick_add,
+                        section_id: section.id,
+                        horizontal_class: false,
+                        horizontal_quick_add: true
+                      %}
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              </div>
+            {%- endfor -%}
+          </div>
+          {%- if number_of_slides > 1 -%}
+            <div class="slider-buttons no-js-hidden">
+              <button
+                type="button"
+                class="slider-button slider-button--prev"
+                name="previous"
+                aria-label="{{ 'general.slider.previous_slide' | t }}"
+              >
+                {% render 'icon-caret' %}
+              </button>
+              <div class="slider-counter slider-counter--{{ section.settings.pagination_style }}{% if section.settings.pagination_style == 'counter' or section.settings.pagination_style == 'numbers' %} caption{% endif %}">
+                {%- if section.settings.pagination_style == 'counter' -%}
+                  <span class="slider-counter--current">1</span>
+                  <span aria-hidden="true"> / </span>
+                  <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+                  <span class="slider-counter--total">{{ number_of_slides }}</span>
+                {%- else -%}
+                  <div class="slideshow__control-wrapper">
+                    {%- for i in (1..number_of_slides) -%}
+                      <button
+                        class="slider-counter__link slider-counter__link--{{ section.settings.pagination_style }} link"
+                        aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+                        aria-controls="Slider-{{ section.id }}"
+                      >
+                        {%- if section.settings.pagination_style == 'numbers' -%}
+                          {{ forloop.index -}}
+                        {%- else -%}
+                          <span class="dot"></span>
+                        {%- endif -%}
+                      </button>
+                    {%- endfor -%}
+                  </div>
+                {%- endif -%}
+              </div>
+              <button
+                type="button"
+                class="slider-button slider-button--next"
+                name="next"
+                aria-label="{{ 'general.slider.next_slide' | t }}"
+              >
+                {% render 'icon-caret' %}
+              </button>
+            </div>
+          {%- endif -%}
+        </slideshow-component>
+      </div>
+    </aside>
+  {%- endif -%}
+  {{ 'component-card.css' | asset_url | stylesheet_tag }}
+  {{ 'component-slider.css' | asset_url | stylesheet_tag }}
+  {{ 'template-collection-gallery.css' | asset_url | stylesheet_tag }}
+  {{ 'component-complementary-products.css' | asset_url | stylesheet_tag }}
+  {%- if section.settings.enable_quick_add -%}
+    {{ 'quick-add.css' | asset_url | stylesheet_tag }}
+    <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
+  {%- endif -%}
+</product-recommendations>
+
+{% schema %}
+{
+  "name": "Complementary Products",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:sections.main-product.blocks.complementary_products.settings.paragraph.content"
+    },
+    {
+      "type": "text",
+      "id": "block_heading",
+      "default": "Pairs well with",
+      "label": "t:sections.main-product.blocks.complementary_products.settings.heading.label"
+    },
+    {
+      "type": "range",
+      "id": "product_list_limit",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 10,
+      "label": "t:sections.main-product.blocks.complementary_products.settings.product_list_limit.label"
+    },
+    {
+      "type": "range",
+      "id": "products_per_page",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "default": 3,
+      "label": "t:sections.main-product.blocks.complementary_products.settings.products_per_page.label"
+    },
+    {
+      "type": "select",
+      "id": "pagination_style",
+      "options": [
+        {
+          "value": "dots",
+          "label": "t:sections.main-product.blocks.complementary_products.settings.pagination_style.options.option_1"
+        },
+        {
+          "value": "counter",
+          "label": "t:sections.main-product.blocks.complementary_products.settings.pagination_style.options.option_2"
+        },
+        {
+          "value": "numbers",
+          "label": "t:sections.main-product.blocks.complementary_products.settings.pagination_style.options.option_3"
+        }
+      ],
+      "label": "t:sections.main-product.blocks.complementary_products.settings.pagination_style.label",
+      "default": "counter"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.main-product.blocks.complementary_products.settings.product_card.heading"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        {
+          "value": "portrait",
+          "label": "t:sections.main-product.blocks.complementary_products.settings.image_ratio.options.option_1"
+        },
+        {
+          "value": "square",
+          "label": "t:sections.main-product.blocks.complementary_products.settings.image_ratio.options.option_2"
+        }
+      ],
+      "label": "t:sections.main-product.blocks.complementary_products.settings.image_ratio.label",
+      "default": "square"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_quick_add",
+      "label": "t:sections.main-product.blocks.complementary_products.settings.enable_quick_add.label",
+      "default": false
+    }
+  ]
+}
+{% endschema %}

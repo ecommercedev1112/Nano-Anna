@@ -1,0 +1,27 @@
+{% paginate blog.articles by 3 %}  <!-- Adjust the number of articles per page -->
+  <div class="custom-blog-posts">
+    {% for article in blog.articles %}
+      <h2><a href="{{ article.url }}">{{ article.title }}</a></h2>
+      <p>{{ article.excerpt | strip_html | truncate: 150 }}</p>
+    {% endfor %}
+  </div>
+
+  <!-- Pagination for custom section -->
+  <div class="pagination">
+    {% if paginate.previous %}
+      <a href="{{ paginate.previous.url }}">Previous</a>
+    {% endif %}
+
+    {% for part in paginate.parts %}
+      {% if part.is_link %}
+        <a href="{{ part.url }}">{{ part.title }}</a>
+      {% else %}
+        <span>{{ part.title }}</span>
+      {% endif %}
+    {% endfor %}
+
+    {% if paginate.next %}
+      <a href="{{ paginate.next.url }}">Next</a>
+    {% endif %}
+  </div>
+{% endpaginate %}

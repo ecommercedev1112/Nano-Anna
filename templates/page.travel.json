@@ -1,0 +1,53 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "7eddcd5d-c72c-4a22-ac9e-0db73d820cd3": {
+      "type": "featured-collection-gallery",
+      "settings": {
+        "gallery_style_type": "style-3",
+        "gallery_style_direction": "normal",
+        "featured_image": "shopify:\/\/shop_images\/Look-6_696-Enhanced-NR.jpg",
+        "title": "Travel and Style",
+        "title_hd_h1": true,
+        "heading_size": "h0",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "button_label": "Shop the collection",
+        "button_link": "",
+        "collection": "the-summer-lbd",
+        "products_to_show": 5,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_label": "Shop the looks",
+        "view_all_link": "",
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-d97a9f22-603c-40a7-b2da-236e21cb0d2e",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "advanced_styling": "",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    }
+  },
+  "order": [
+    "main",
+    "7eddcd5d-c72c-4a22-ac9e-0db73d820cd3"
+  ]
+}

@@ -1,0 +1,244 @@
+{% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
+{{ 'component-collection-hero.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  @media screen and (max-width: 749px) {
+    .collection-hero--with-image .collection-hero__inner {
+      padding-bottom: calc({{settings.media_shadow_vertical_offset | at_least: 0}}px + 2rem);
+    }
+  }
+{%- endstyle -%}
+
+<div
+  class="facets-outer-wrapper"
+  {% if collection.metafields.custom._background_color %}
+    style="background-color: {{ collection.metafields.custom._background_color }}"
+  {% endif %}
+>
+  <div
+    class="facets-outer-container{% if section.settings.filter_type == 'vertical' %} facets-vertical page-width{% endif %}"
+  >
+    {{ 'component-facets.css' | asset_url | stylesheet_tag }}
+    <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
+    {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
+      <aside
+        aria-labelledby="verticalTitle"
+        class="facets-wrapper{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
+        id="main-collection-filters"
+        data-id="{{ section.id }}"
+      >
+        <button id="menu-button" class="link large-up-hide">Collections</button>
+        <div id="collections-menu" class="collections-menu-drawer-container collections-menu">
+          <div class="collections-menu-drawer__inner-container">
+            <div class="collections-menu-drawer__close-container large-up-hide">
+              <h4>Collections</h4>
+              <span id="close-button" class="close-btn">
+                {% render 'icon-close' %}
+              </span>
+            </div>
+            <div id="collections-menu-drawer" class="collections-menu-drawer motion-reduce">
+              <ul id="menu-list" class="list-menu list-menu--inline" role="list">
+                {% for link in linklists['collections-menu'].links -%}
+                  <li
+                    {% if link.active %}
+                      class="li__menu-item--active"
+                    {% endif %}
+                  >
+                    {{
+                      link.title
+                      | link_to: link.url, class: 'header__menu-item list-menu__item link link--text focus-inset'
+                    }}
+                  </li>
+                {%- endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+        {% render 'facets',
+          results: collection,
+          enable_filtering: section.settings.enable_filtering,
+          enable_sorting: section.settings.enable_sorting,
+          filter_type: section.settings.filter_type,
+          paginate: paginate
+        %}
+      </aside>
+    {%- endif -%}
+  </div>
+</div>
+
+<div
+  class="collection-hero{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %} color-{{ section.settings.color_scheme }} gradient"
+  {% if collection.metafields.custom._background_color %}
+    style="background-color: {{ collection.metafields.custom._background_color }}"
+  {% endif %}
+>
+  <div class="collection-hero__inner page-width {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+    <div class="collection-hero__text-wrapper">
+      <h1 class="collection-hero__title">
+        <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
+        {{- collection.title | escape -}}
+      </h1>
+
+      {%- if section.settings.show_collection_description -%}
+        <div class="collection-hero__description rte">{{ collection.description }}</div>
+      {%- endif -%}
+    </div>
+
+    {%- if collection.metafields.custom.video -%}
+      <div class="collection-hero__image-container collection-hero__image-container--has-video media gradient">
+  {{
+    collection.metafields.custom.video.value
+    | video_tag: image_size: '1500x', loop: true, muted: true, controls: false
+  }}
+</div>
+    {%- else -%}
+      {%- if section.settings.show_collection_image
+        and collection.image
+        and collection.template_suffix != 'alternative'
+      -%}
+        <div class="collection-hero__image-container media gradient">
+          <img
+            srcset="
+              {%- if collection.image.width >= 165 -%}{{ collection.image | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if collection.image.width >= 360 -%}{{ collection.image | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if collection.image.width >= 535 -%}{{ collection.image | image_url: width: 535 }} 535w,{%- endif -%}
+              {%- if collection.image.width >= 750 -%}{{ collection.image | image_url: width: 750 }} 750w,{%- endif -%}
+              {%- if collection.image.width >= 1070 -%}{{ collection.image | image_url: width: 1070 }} 1070w,{%- endif -%}
+              {%- if collection.image.width >= 1500 -%}{{ collection.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+              {{ collection.image | image_url }} {{ collection.image.width }}w
+            "
+            src="{{ collection.image | image_url: width: 750 }}"
+            sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc(50vw - 130px), calc(50vw - 55px)"
+            alt=""
+            width="{{ collection.image.width }}"
+            height="{{ collection.image.height }}"
+          >
+        </div>
+      {%- endif -%}
+    {%- endif -%}
+  </div>
+</div>
+
+<script>
+  // JavaScript
+  document.addEventListener('DOMContentLoaded', function () {
+    var menuButton = document.getElementById('menu-button');
+    var closeButton = document.getElementById('close-button');
+    var menuDrawer = document.getElementById('collections-menu');
+
+    // Function to open the menu
+    function openMenuDrawer() {
+      menuDrawer.classList.add('active');
+    }
+
+    // Function to close the menu
+    function closeMenuDrawer() {
+      menuDrawer.classList.remove('active');
+    }
+
+    // Open the menu when the menu button is clicked
+    menuButton.addEventListener('click', openMenuDrawer);
+
+    // Close the menu when the close button is clicked
+    closeButton.addEventListener('click', closeMenuDrawer);
+
+    // Close the menu when click outside the drawer
+    window.onclick = function (event) {
+      if (event.target === menuDrawer) {
+        closeMenuDrawer();
+      }
+    };
+  });
+
+  {%- if collection.metafields.custom.video -%}
+   // Wait for DOM content to fully load
+  document.addEventListener('DOMContentLoaded', function () {
+    // get a reference to the <video> element
+    const videoEl = document.querySelector('video');
+
+    // Ensure the video element exists before trying to play it
+    if (videoEl) {
+      // Try to play the video
+      videoEl.play()
+        .then(() => {
+          console.log('Autoplay success!');
+        })
+        .catch((error) => {
+          console.warn('Autoplay error:', error);
+        });
+    } else {
+      console.warn('Video element not found!');
+    }
+  });
+  {%- endif-%}
+</script>
+
+{% schema %}
+{
+  "name": "t:sections.main-collection-banner.name",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.main-collection-product-grid.settings.header__1.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_filtering",
+      "default": true,
+      "label": "t:sections.main-collection-product-grid.settings.enable_filtering.label",
+      "info": "t:sections.main-collection-product-grid.settings.enable_filtering.info"
+    },
+    {
+      "type": "select",
+      "id": "filter_type",
+      "options": [
+        {
+          "value": "horizontal",
+          "label": "t:sections.main-collection-product-grid.settings.filter_type.options__1.label"
+        },
+        {
+          "value": "vertical",
+          "label": "t:sections.main-collection-product-grid.settings.filter_type.options__2.label"
+        },
+        {
+          "value": "drawer",
+          "label": "t:sections.main-collection-product-grid.settings.filter_type.options__3.label"
+        }
+      ],
+      "default": "horizontal",
+      "label": "t:sections.main-collection-product-grid.settings.filter_type.label",
+      "info": "t:sections.main-collection-product-grid.settings.filter_type.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sorting",
+      "default": true,
+      "label": "t:sections.main-collection-product-grid.settings.enable_sorting.label"
+    },
+    {
+      "type": "paragraph",
+      "content": "t:sections.main-collection-banner.settings.paragraph.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection_description",
+      "default": true,
+      "label": "t:sections.main-collection-banner.settings.show_collection_description.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection_image",
+      "default": false,
+      "label": "t:sections.main-collection-banner.settings.show_collection_image.label",
+      "info": "t:sections.main-collection-banner.settings.show_collection_image.info"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,13 @@
+.related-products {
+  display: block;
+}
+
+.related-products__heading {
+  margin: 0 0 3rem;
+}
+
+/* ADDITIONAL STYLES */
+.related-products__heading {
+  font-family: 'Domaine Display Test';
+  font-size: 2.4rem;
+}

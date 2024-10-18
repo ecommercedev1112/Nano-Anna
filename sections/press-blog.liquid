@@ -1,0 +1,68 @@
+<div class="blog-page-main">
+<div class="post-container">
+    <h1>{{ page.title }}</h1>
+
+    <div class="post-list">
+        {% assign blog_handle = 'press' %}
+        {% assign blog = blogs[blog_handle] %}
+
+        {% if blog %}
+            {% paginate blog.articles by 12 %}
+                {% for article in blog.articles %}
+                  <div class="post-items">
+                    <div class="card-blog-post">
+                        <!-- Featured Image -->
+                        {% if article.image %}
+                            <div class="featured-image">
+                                <a href="{{ article.url }}">
+                                     <img src="{{ article.image | img_url: 'master' }}" alt="{{ article.title }}" width="{{ article.featured_image.width }}" height="{{ article.featured_image.height }}" />
+                                </a>
+                            </div>
+                        {% else %}
+                            <!-- Fallback Image when no featured image is available -->
+                            <div class="featured-image">
+                              <a href="{{ article.url }}">
+                                <img src="{{ article.featured_image | img_url: 'master' }}" alt="{{ article.title }} width="{{ article.featured_image.width }}" height="{{ article.featured_image.height }}" />
+                              </a>
+                            </div>
+                        {% endif %}
+
+                        <p class="post-date">{{ article.published_at | date: "%b %d, %Y" }}</p>
+                        <h2><a href="{{ article.url }}">{{ article.title }}</a></h2>
+                        
+                        <!-- <p>{{ article.excerpt | truncatewords: 30 }}</p> -->
+                        <div class="btnbox">
+                          <a class="post-btn" href="{{ article.url }}">Read More</a>
+                        </div>
+                    </div>
+                  </div>
+                {% endfor %}
+                <div class="pagination post-pagination">
+                    {% if paginate.previous %}
+                        <a class="pagin-link prev" href="{{ paginate.previous.url }}">
+                          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-left" viewBox="0 0 284.49 498.98"><defs><style>.cls-1{fill:#231f20}</style></defs><path class="cls-1" d="M249.49 0a35 35 0 0 1 24.75 59.75L84.49 249.49l189.75 189.74a35.002 35.002 0 1 1-49.5 49.5L10.25 274.24a35 35 0 0 1 0-49.5L224.74 10.25A34.89 34.89 0 0 1 249.49 0z"></path></svg>
+                        </a>
+                    {% endif %}
+
+                    {% for part in paginate.parts %}
+                        {% if part.is_link %}
+                            <a class="pagin-link" href="{{ part.url }}">{{ part.title }}</a>
+                        {% else %}
+                            <span class="pagin-link">{{ part.title }}</span>
+                        {% endif %}
+                    {% endfor %}
+
+                    {% if paginate.next %}
+                        <a class="pagin-link next" href="{{ paginate.next.url }}">
+                          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-chevron-right" viewBox="0 0 284.49 498.98"><defs><style>.cls-1{fill:#231f20}</style></defs><path class="cls-1" d="M35 498.98a35 35 0 0 1-24.75-59.75l189.74-189.74L10.25 59.75a35.002 35.002 0 0 1 49.5-49.5l214.49 214.49a35 35 0 0 1 0 49.5L59.75 488.73A34.89 34.89 0 0 1 35 498.98z"></path></svg>
+                        </a>
+                    {% endif %}
+                </div>
+            {% endpaginate %}
+        {% else %}
+            <p>No blog posts available.</p>
+        {% endif %}
+    </div>
+  
+</div>
+</div>

@@ -1,0 +1,121 @@
+{% comment %}
+  Renders product variant options
+
+  Accepts:
+  - product: {Object} product object.
+  - option: {Object} current product_option object.
+  - block: {Object} block object.
+
+  Usage:
+  {% render 'product-variant-options',
+    product: product,
+    option: option,
+    block: block
+  %}
+{% endcomment %}
+{%- liquid
+  assign variants_available_arr = product.variants | map: 'available'
+  assign variants_option1_arr = product.variants | map: 'option1'
+  assign variants_option2_arr = product.variants | map: 'option2'
+  assign variants_option3_arr = product.variants | map: 'option3'
+
+  assign product_form_id = 'product-form-' | append: section.id
+-%}
+
+{%- for value in option.values -%}
+  {%- liquid
+    assign option_disabled = true
+    assign variant_id = null
+
+    for variant in product.variants
+      case option.position
+        when 1
+          if variant.option1 == value and variant.available
+            assign option_disabled = false
+            assign variant_id = variant.id
+          endif
+        when 2
+          if variant.option1 == product.selected_or_first_available_variant.option1 and variant.option2 == value and variant.available
+            assign option_disabled = false
+            assign variant_id = variant.id
+          endif
+        when 3
+          if variant.option1 == product.selected_or_first_available_variant.option1 and variant.option2 == product.selected_or_first_available_variant.option2 and variant.option3 == value and variant.available
+            assign option_disabled = false
+            assign variant_id = variant.id
+          endif
+      endcase
+    endfor
+  -%}
+
+  {%- if block.settings.picker_type == 'button' -%}
+    <input
+      type="radio"
+      id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+      name="{{ option.name }}"
+      value="{{ value | escape | replace: ' ', '@@@' | replace: '@@@@@@', '@@@' | replace: '@@@', ' ' }}"
+      form="{{ product_form_id }}"
+      data-variant-id="{{ variant_id }}"
+      {% if option.selected_value == value %}
+        checked
+      {% endif %}
+      {% if option_disabled %}
+        class="disabled"
+      {% endif %}
+    >
+    <label
+      for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+      class="product-card__color-variant-{{ value | downcase | split: ' ' | join: '-' | replace: '/' , '-' }}"
+      data-variant-name="{{ value }}"
+    >
+      {% if option.name == 'Color' %}
+        <span class="visually-hidden">{{ value }}</span>
+      {% else %}
+        {{ value }}
+      {% endif %}
+      <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
+    </label>
+  {%- elsif block.settings.picker_type == 'dropdown' -%}
+    <option
+      value="{{ value | escape | replace: ' ', '@@@' | replace: '@@@@@@', '@@@' | replace: '@@@', ' ' }}"
+      {% if option.selected_value == value %}
+        selected="selected"
+      {% endif %}
+    >
+      {% if option_disabled -%}
+        {{- 'products.product.value_unavailable' | t: option_value: value -}}
+      {%- else -%}
+        {{- value -}}
+      {%- endif %}
+    </option>
+  {%- endif -%}
+{%- endfor -%}
+
+{% if option.name == 'Color' %}
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var colorInputs = document.querySelectorAll('input[name="{{ option.name }}"]');
+      var selectedVariantValue = document.querySelector('.selected-variant-value');
+
+      function updateSelectedColor(value) {
+        if (selectedVariantValue) {
+          selectedVariantValue.textContent = value;
+        }
+      }
+
+      colorInputs.forEach(function (input) {
+        input.addEventListener('change', function () {
+          if (this.checked) {
+            updateSelectedColor(this.value);
+          }
+        });
+      });
+
+      // Set initial value
+      var checkedInput = document.querySelector('input[name="{{ option.name }}"]:checked');
+      if (checkedInput) {
+        updateSelectedColor(checkedInput.value);
+      }
+    });
+  </script>
+{% endif %}

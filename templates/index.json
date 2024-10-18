@@ -1,0 +1,468 @@
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "Introducing",
+            "text_style": "caption-with-letter-spacing"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<em>Kathy Hilton x Anna Zuckerman<\/em>",
+            "heading_size": "h1"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify:\/\/collections\/kathy-hilton",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "text",
+        "heading",
+        "button"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Hilton_X_AZ_Banner.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "desktop_content_position": "bottom-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-4ff066f3-9d1b-47d7-afc1-5177f675bd4d",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false,
+        "advanced_styling": ""
+      }
+    },
+    "c9c68290-f986-418d-a6e0-c1f18665df9e": {
+      "type": "half-video-banner",
+      "blocks": {
+        "template--14576621486142__c9c68290-f986-418d-a6e0-c1f18665df9e-1685567923fbf94449-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "template--14576621486142__c9c68290-f986-418d-a6e0-c1f18665df9e-1685567923fbf94449-1": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "template--14576621486142__c9c68290-f986-418d-a6e0-c1f18665df9e-1685567923fbf94449-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14576621486142__c9c68290-f986-418d-a6e0-c1f18665df9e-1685567923fbf94449-0",
+        "template--14576621486142__c9c68290-f986-418d-a6e0-c1f18665df9e-1685567923fbf94449-1",
+        "template--14576621486142__c9c68290-f986-418d-a6e0-c1f18665df9e-1685567923fbf94449-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/New_Web_Banner_7fab2a6d-0a02-4262-b261-7f55018819da.png",
+        "image_mobile": "shopify:\/\/shop_images\/New_Web_Banner_7fab2a6d-0a02-4262-b261-7f55018819da.png",
+        "button_link": "https:\/\/annazuckerman.com\/collections\/last-call",
+        "image_2": "shopify:\/\/shop_images\/Updated_banner_disclaimer.png",
+        "video": "shopify:\/\/files\/videos\/AZ Studs Video Banner 01.mp4",
+        "button_link_2": "shopify:\/\/collections\/all-products-collection",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "98b48e3f-463c-4b5b-918c-64fff53de874": {
+      "type": "image-banner",
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Look-2_169_RET2.jpg",
+        "image_2": "shopify:\/\/shop_images\/Look-2_167_RET2.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "desktop_content_position": "bottom-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false,
+        "advanced_styling": ""
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Last Chance Collection",
+        "hd_title_h1": false,
+        "heading_size": "h2",
+        "description": "<p><\/p><p><a href=\"https:\/\/annazuckerman.com\/collections\/last-call\" target=\"_blank\" title=\"Last Chance Collection\">View All<\/a><\/p>",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "last-call",
+        "products_to_show": 13,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "link",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "advanced_styling": "",
+        "padding_top": 52,
+        "padding_bottom": 36
+      }
+    },
+    "c391caef-04e6-486c-8b53-db284b700d36": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--14570665345086__c391caef-04e6-486c-8b53-db284b700d36-16844310104758596e-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Look-3_340-Enhanced-NR.jpg",
+            "title": "Everyday",
+            "text": "<p>Collection<\/p>",
+            "link_label": "",
+            "link": "shopify:\/\/collections\/everyday"
+          }
+        },
+        "template--14570665345086__c391caef-04e6-486c-8b53-db284b700d36-16844310104758596e-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Look-6_656-Enhanced-NR.jpg",
+            "title": "Travel",
+            "text": "<p>Collection<\/p>",
+            "link_label": "",
+            "link": "shopify:\/\/collections\/travel"
+          }
+        },
+        "bc3bfdea-bafd-437b-9f61-86bd09b92cd9": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Look-9_1293-Enhanced-NR.jpg",
+            "title": "Occasion",
+            "text": "<p>Collection<\/p>",
+            "link_label": "",
+            "link": "shopify:\/\/collections\/occasion"
+          }
+        },
+        "98c03381-0202-41e0-859b-801cd4e8cc9e": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Look-12_1709-Enhanced-NR_711aa4ae-c86f-41f3-acfc-e722d6fb501d.jpg",
+            "title": "Bridal",
+            "text": "<p>Collection<\/p>",
+            "link_label": "",
+            "link": "shopify:\/\/collections\/bridal"
+          }
+        }
+      },
+      "block_order": [
+        "template--14570665345086__c391caef-04e6-486c-8b53-db284b700d36-16844310104758596e-0",
+        "template--14570665345086__c391caef-04e6-486c-8b53-db284b700d36-16844310104758596e-1",
+        "bc3bfdea-bafd-437b-9f61-86bd09b92cd9",
+        "98c03381-0202-41e0-859b-801cd4e8cc9e"
+      ],
+      "settings": {
+        "title": "",
+        "multi_title_h1": false,
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "square",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "advanced_styling": "",
+        "padding_top": 0,
+        "padding_bottom": 64
+      }
+    },
+    "700f9799-ed47-40e5-95e5-7660c4162f9a": {
+      "type": "featured-collection-gallery",
+      "settings": {
+        "gallery_style_type": "style-1",
+        "gallery_style_direction": "normal",
+        "featured_image": "shopify:\/\/shop_images\/Look-6_696-Enhanced-NR.jpg",
+        "title": "<strong>Wanderlust<\/strong>",
+        "title_hd_h1": false,
+        "heading_size": "h2",
+        "description": "<p>The Looks<\/p>",
+        "show_description": false,
+        "description_style": "uppercase",
+        "button_label": "Shop the collection",
+        "button_link": "",
+        "collection": "the-summer-lbd",
+        "products_to_show": 5,
+        "columns_desktop": 3,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_label": "See other looks",
+        "view_all_link": "shopify:\/\/pages\/lifestyle",
+        "view_all_style": "link",
+        "enable_desktop_slider": true,
+        "color_scheme": "accent-2",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "advanced_styling": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "b9f7942f-dbcb-4482-b946-47549fe53ee1": {
+      "type": "collection-list",
+      "blocks": {
+        "template--14570665345086__b9f7942f-dbcb-4482-b946-47549fe53ee1-168443082570e7e4bd-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "rings"
+          }
+        },
+        "8fa3bffa-9fe8-4510-a6a1-8b803f8bab2b": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "earrings"
+          }
+        },
+        "template--14570665345086__b9f7942f-dbcb-4482-b946-47549fe53ee1-168443082570e7e4bd-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bracelets"
+          }
+        },
+        "template--14570665345086__b9f7942f-dbcb-4482-b946-47549fe53ee1-168443082570e7e4bd-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "all-necklaces"
+          }
+        }
+      },
+      "block_order": [
+        "template--14570665345086__b9f7942f-dbcb-4482-b946-47549fe53ee1-168443082570e7e4bd-0",
+        "8fa3bffa-9fe8-4510-a6a1-8b803f8bab2b",
+        "template--14570665345086__b9f7942f-dbcb-4482-b946-47549fe53ee1-168443082570e7e4bd-1",
+        "template--14570665345086__b9f7942f-dbcb-4482-b946-47549fe53ee1-168443082570e7e4bd-2"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_ratio": "portrait",
+        "columns_desktop": 4,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "advanced_styling": "",
+        "padding_top": 52,
+        "padding_bottom": 36
+      }
+    },
+    "b605d920-7077-45a7-ba63-27718ea739e7": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14570665345086__b605d920-7077-45a7-ba63-27718ea739e7-16844317807969fefd-1": {
+          "type": "text",
+          "settings": {
+            "text": "<h2><strong>Celebrating luxury every day<\/strong><\/h2>"
+          }
+        },
+        "7144f33c-9bda-4520-b499-41e27f73ae38": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>from casual chic to wear to work, gowns to glam, travel, bridal,  & every milestone.<\/strong><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14570665345086__b605d920-7077-45a7-ba63-27718ea739e7-16844317807969fefd-1",
+        "7144f33c-9bda-4520-b499-41e27f73ae38"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "advanced_styling": "highlighted-text",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "6e85219c-d6f1-485a-95f5-e00131f67efd": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "Editorial",
+        "heading_size": "h1",
+        "blog": "press",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_image": true,
+        "show_date": false,
+        "show_author": false,
+        "show_view_all": true,
+        "advanced_styling": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "344eb799-3819-4503-afcc-f13696330770": {
+      "type": "multicolumn",
+      "blocks": {
+        "29d06044-b93c-4500-a733-603ec1b52ee5": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Shop-TodayAZ.png",
+            "title": "",
+            "text": "<p>Winner in the first-ever <strong>Shop TODAY Gifts We Love <\/strong>for 2024<strong>!<\/strong><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--14570665345086__344eb799-3819-4503-afcc-f13696330770-16844310104758596e-0": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Drew_Barrymore_Show_logo_1.png",
+            "title": "",
+            "text": "<p>AZL Featured on Drew Barrymore Show with Lilly Singh<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--14570665345086__344eb799-3819-4503-afcc-f13696330770-16844310104758596e-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Comopolitan_Magazine_Logo_1.png",
+            "title": "",
+            "text": "<p>Anna Zuckerman Luxury Featured in Jackie Aina's Cosmopolitan Black History Month Photo Shoot<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--14570665345086__344eb799-3819-4503-afcc-f13696330770-16844310104758596e-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/E__News_logo_1.png",
+            "title": "",
+            "text": "<p>On Her Wedding Day, No Diamonds For This Designer<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "11304883-8d50-4de5-ab37-23a67c51d1ca": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/MTV_Movie___TV_Awards_logo_1.png",
+            "title": "",
+            "text": "<p>Actress Sofia Pernas wearing Anna Zuckerman Luxury at the MTV Movie & TV Awards<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "29d06044-b93c-4500-a733-603ec1b52ee5",
+        "template--14570665345086__344eb799-3819-4503-afcc-f13696330770-16844310104758596e-0",
+        "template--14570665345086__344eb799-3819-4503-afcc-f13696330770-16844310104758596e-1",
+        "template--14570665345086__344eb799-3819-4503-afcc-f13696330770-16844310104758596e-2",
+        "11304883-8d50-4de5-ab37-23a67c51d1ca"
+      ],
+      "settings": {
+        "title": "<em>Seen in<\/em>",
+        "multi_title_h1": false,
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "accent-2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "advanced_styling": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "ef369b60-7de3-4680-a11b-aa5a6ff79cad": {
+      "type": "video-preloader-mux",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "2e4fd047-0ec5-49fc-bd6c-013a04d3643b": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<script>\nwindow.addEventListener('load', function() {\nvar _learnq = window._learnq || [];\nfunction addedToCart() {\n  fetch(`${window.location.origin}\/cart.js`)\n  .then(res => res.clone().json().then(data => {\n    var cart = {\n      total_price: data.total_price\/100,\n      $value: data.total_price\/100,\n      total_discount: data.total_discount,\n      original_total_price: data.original_total_price\/100,\n      items: data.items\n    }\n    if (item !== 'undefined') {\n      cart = Object.assign(cart, item)\n    }\n    if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', cart]);\n        klAjax = false;\n      }\n  }))\n};\n(function (ns, fetch) {\n  ns.fetch = function() {\n    const response = fetch.apply(this, arguments);\n    response.then(res => {\n      if (`${window.location.origin}\/cart\/add.js`\n      \t.includes(res.url)) {\n        \taddedToCart()\n      }\n    });\n    return response\n  }\n}(window, window.fetch));\nvar klAjax = true;\nvar atcButtons = document.querySelectorAll(\"form[action*='\/cart\/add'] button[type='submit']\");\nfor (var i = 0; i < atcButtons.length; i++) {\n    atcButtons[i].addEventListener(\"click\", function() {\n      if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', item]);\n        klAjax = false;\n      }\n    })\n}\n});\n<\/script>",
+        "color_scheme": "",
+        "advanced_styling": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "c9c68290-f986-418d-a6e0-c1f18665df9e",
+    "98b48e3f-463c-4b5b-918c-64fff53de874",
+    "featured_collection",
+    "c391caef-04e6-486c-8b53-db284b700d36",
+    "700f9799-ed47-40e5-95e5-7660c4162f9a",
+    "b9f7942f-dbcb-4482-b946-47549fe53ee1",
+    "b605d920-7077-45a7-ba63-27718ea739e7",
+    "6e85219c-d6f1-485a-95f5-e00131f67efd",
+    "344eb799-3819-4503-afcc-f13696330770",
+    "ef369b60-7de3-4680-a11b-aa5a6ff79cad",
+    "2e4fd047-0ec5-49fc-bd6c-013a04d3643b"
+  ]
+}

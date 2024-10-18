@@ -1,0 +1,601 @@
+.collection-gallery {
+  display: flex;
+  flex-direction: column;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.collection-gallery .link .icon-arrow {
+  margin-left: 1rem;
+}
+
+.collection__title.large-up-hide:not(.title-wrapper-style-1) {
+  display: none;
+}
+
+.collection-gallery .collection__title.large-up-hide p {
+  font-size: 1.2rem;
+}
+
+.collection-gallery .collection-gallery-image {
+  position: relative;
+}
+
+.collection-gallery .collection-gallery-content {
+  padding-top: 2rem;
+  padding-bottom: 3.2rem;
+}
+
+.collection-gallery slider-component,
+.collection-gallery .product-grid {
+  position: inherit;
+}
+
+.collection-gallery .product-grid {
+  column-gap: 1.4rem;
+}
+
+.collection-gallery slider-component .product-grid.grid--peek.grid--1-col-tablet-down .grid__item {
+  width: 65%;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.collection-gallery .collection__button {
+  color: #ffffff;
+  background: #32302d;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.4rem;
+  font-family: 'GT America Extended';
+}
+
+.collection-gallery .card__heading a {
+  font-size: 1.4rem;
+}
+
+.collection-gallery .collection__view-all a {
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.style-1 .slider-buttons {
+  position: absolute;
+  top: -5rem;
+}
+
+.style-1 .slider-button {
+  width: 3.4rem;
+  height: 2.2rem;
+  color: rgba(var(--color-foreground), 0.75);
+}
+
+.style-1 .collection__view-all {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+}
+
+.style-1 .collection-gallery .collection__view-all a:hover {
+  text-decoration: underline;
+}
+
+.style-1 .slider-counter {
+  display: none;
+}
+
+.style-1 .slider-button svg {
+  height: 1rem;
+}
+
+.style-1 .slider-buttons .slider-button--prev,
+.style-1 .slider-buttons .slider-button--next {
+  transform: rotate(90deg);
+}
+
+.style-2 .title-wrapper,
+.style-3 .title-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.style-2 .title-wrapper .title,
+.style-3 .title-wrapper .title {
+  order: 0;
+}
+
+.style-2 .title-wrapper .collection__description,
+.style-3 .title-wrapper .collection__description {
+  order: 1;
+}
+
+.style-2 .title-wrapper .collection__button-container,
+.style-3 .title-wrapper .collection__button-container {
+  margin-top: 2.5rem;
+  order: 2;
+}
+
+.style-2 .collection__description p,
+.style-3 .collection__description p {
+  color: #000000;
+  max-width: 40rem;
+}
+
+.style-2 .collection-gallery-content .title-wrapper,
+.style-3 .collection-gallery-content .title-wrapper {
+  display: flex !important;
+}
+
+.style-2 .slider-counter {
+  display: none;
+}
+
+.style-2 .slider-buttons button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-color: #000000;
+  border-radius: 100%;
+}
+
+.style-2 .slider-buttons button.slider-button--prev {
+  left: 0;
+}
+
+.style-2 .slider-buttons button.slider-button--next {
+  right: -1rem;
+}
+
+.style-2.gallery-grid-3 .slider-buttons button.slider-button--prev {
+  left: 0;
+}
+
+.style-2.gallery-grid-3 .slider-buttons button.slider-button--next {
+  right: 0;
+}
+
+.style-2 .slider-buttons button .icon {
+  color: #ffffff;
+}
+
+.style-2.direction-normal.gallery-grid-1 .collection-gallery {
+  flex-wrap: wrap;
+}
+
+.style-2 .collection-gallery-image .collection__view-all {
+  position: absolute;
+  z-index: 2;
+  bottom: 1rem;
+  top: inherit;
+  display: flex;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.style-2.direction-reversed .collection-gallery-image .collection__view-all {
+  justify-content: flex-start;
+}
+
+.style-2 .collection-gallery-image.has-view-all:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-image: inherit;
+  left: 0;
+  height: 10%;
+  z-index: 2;
+}
+
+.style-2 .looks-gallery .title-wrapper .title {
+  text-align: center;
+  font-family: 'GT America';
+}
+
+.style-2 .looks-gallery .title-wrapper .title em {
+  font-family: 'Domaine Display Test';
+}
+
+.style-2 .looks-gallery .product-grid {
+  padding-bottom: 7rem;
+}
+
+.style-2 .looks-gallery .quick-add {
+  position: absolute;
+  bottom: -7rem;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  max-width: 20rem;
+}
+
+.style-3 .title-wrapper {
+  text-align: center;
+  max-width: 60rem;
+}
+
+.style-3 .collection__description p {
+  margin: 0 auto;
+  max-width: 30rem;
+}
+
+.style-3 .collection-gallery slider-component {
+  margin-bottom: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.style-3 .collection-gallery-content {
+  padding-bottom: 0 !important;
+}
+
+.style-3 .collection__title .title:not(:only-child) {
+  font-size: 5rem;
+}
+
+@media screen and (min-width: 750px) {
+  .collection-featured .collection__title {
+    margin-right: auto;
+    margin-left: auto;
+    order: 0;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .collection__title.title-wrapper:not(.title-wrapper-style-1) {
+    padding: 0;
+  }
+
+  .collection-gallery .collection-gallery-content {
+    padding: 3.2rem;
+  }
+
+  .collection-gallery slider-component .product-grid.grid--peek.grid--1-col-tablet-down .grid__item {
+    width: 40%;
+  }
+
+  .collection-gallery .card--standard > .card__content {
+    background-color: #ffffff;
+    align-items: flex-end;
+  }
+
+  .collection-gallery .card--standard > .card__content .card__information {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+
+  .style-2 .looks-gallery .title-wrapper .title {
+    margin-bottom: 0;
+    font-size: 3.6rem;
+  }
+
+  .style-2.gallery-grid-3 .slider-buttons button.slider-button--next {
+    right: -1rem;
+  }
+
+  .style-2.gallery-grid-1 .title-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .style-2 .slider-buttons button.slider-button--prev {
+    left: -3rem;
+  }
+
+  .style-2 .slider-buttons button.slider-button--next {
+    right: -3rem;
+  }
+
+  .style-2.direction-normal.gallery-grid-1.gallery-grid-3 .collection.page-width {
+    flex-direction: row;
+  }
+
+  .style-2.direction-reversed .collection-gallery:not(.looks-gallery) .collection.page-width {
+    padding-right: 0;
+    padding-left: 3rem;
+  }
+
+  .style-2.gallery-grid-3 slider-component {
+    margin-bottom: 0;
+  }
+
+  .style-3 .collection-gallery .collection-gallery-image img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 750px) and (max-width: 989px) {
+  .style-2 slider-component .grid__item:first-of-type,
+  .looks-gallery slider-component .grid__item:first-of-type {
+    margin-left: 0 !important;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .collection-gallery {
+    flex-direction: row;
+  }
+
+  .direction-reversed .collection-gallery {
+    flex-direction: row-reverse;
+  }
+
+  .collection-gallery .collection-gallery-image > div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .collection-gallery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .collection-gallery .collection-gallery-content {
+    width: 60%;
+  }
+
+  .collection-gallery .collection-gallery-image {
+    width: 40%;
+  }
+
+  .collection-gallery slider-component,
+  .collection-gallery .product-grid {
+    position: relative;
+  }
+
+  .collection-gallery-content slider-component .product-grid .slider__slide:first-child {
+    margin-left: inherit;
+    scroll-margin-left: inherit;
+  }
+
+  .collection-gallery-content .product-grid.grid--3-col-desktop .grid__item {
+    width: calc((100% - var(--desktop-margin-left-first-item)));
+  }
+
+  .collection-gallery-content .product-grid.grid--1-col-desktop .grid__item {
+    width: 100%;
+  }
+
+  .style-1 .collection-gallery-image {
+    overflow: hidden;
+  }
+
+  .style-1 .collection__view-all {
+    text-align: left;
+    width: 50%;
+  }
+
+  .style-1 .collection-gallery slider-component .slider-buttons {
+    top: inherit;
+    right: 2rem;
+    bottom: -7.6rem;
+  }
+
+  .style-2 .collection.page-width {
+    margin: 0 auto;
+    padding-right: 3rem;
+    padding-left: 0;
+  }
+
+  .style-2.direction-normal .collection-gallery {
+    flex-direction: row;
+  }
+
+  .style-2 slider-component .slider--desktop {
+    scroll-padding-left: 0;
+  }
+
+  .style-2 .slider-buttons {
+    bottom: inherit;
+    position: unset;
+    right: 0;
+  }
+
+  .style-2.gallery-grid-3 .slider-buttons button.slider-button--prev {
+    left: -3rem;
+  }
+
+  .style-2.gallery-grid-3 .slider-buttons button.slider-button--next {
+    right: -3rem;
+  }
+
+  .style-2 .collection-gallery-image.has-view-all:before {
+    bottom: 0;
+  }
+
+  .style-1 .collection-gallery slider-component:not(.page-width-desktop),
+  .style-1 .collection-gallery .collection__view-all {
+    padding: 0 !important;
+  }
+
+  .style-1 .collection-gallery .collection-gallery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .style-1 .collection-gallery .collection-gallery-image > div {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .style-1 .collection__view-all {
+    margin-top: 5rem;
+  }
+
+  .style-2 .collection.page-width {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .style-2 .slider--desktop .slider__slide:first-child {
+    margin-left: 0;
+    scroll-margin-left: 0;
+  }
+
+  .style-2.gallery-grid-1 slider-component:not(.page-width-desktop) {
+    max-width: 53rem;
+    margin-bottom: 0;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .collection-gallery slider-component .product-grid.grid--peek.grid--1-col-desktop .grid__item {
+    width: 100%;
+  }
+
+  .style-3 .collection-gallery .collection-gallery-image > div {
+    display: block;
+    position: sticky;
+    top: 3rem;
+    z-index: 2;
+    height: 100vh;
+  }
+
+  .style-3 .grid--3-col-desktop .grid__item {
+    max-width: 40%;
+    width: 100%;
+  }
+
+  .style-3 .collection.page-width {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .style-3 .collection-gallery > div {
+    width: 50%;
+  }
+
+  .style-3 .collection-gallery-image img {
+    height: 100% !important;
+    object-fit: contain;
+  }
+
+  .style-3 slider-component ul {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 3.8rem;
+  }
+
+  .style-3 .collection__title .title:not(:only-child) {
+    font-size: 7.2rem;
+  }
+
+  .style-3 slider-component ul {
+    row-gap: 7.6rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .collection-gallery slider-component:not(.page-width-desktop),
+  .collection-gallery .collection__view-all {
+    padding: 0 5rem !important;
+  }
+
+  .collection-gallery .collection-gallery-content {
+    padding: 5.4rem;
+  }
+
+  .style-2.gallery-grid-1 .collection-gallery .collection-gallery-content {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+
+  .style-2.gallery-grid-3 slider-component {
+    margin-top: 10rem;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .style-3 .collection-gallery-image {
+    margin-bottom: 20rem;
+  }
+}
+
+@media screen and (max-width: 989px) {
+  .style-1 .collection-gallery slider-component .slider-buttons {
+    right: 0;
+  }
+
+  .style-1 .collection-gallery .collection-gallery-image > div {
+    position: relative;
+  }
+
+  .collection-gallery-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .style-2 .slider-buttons {
+    display: none;
+  }
+
+  .style-3 .collection-gallery {
+    padding-top: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .style-1 .slider-buttons {
+    justify-content: flex-end;
+  }
+
+  .style-1 .collection-gallery .collection-gallery-image > div {
+    position: relative;
+  }
+
+  .style-1 .collection-gallery .collection-gallery-image > div img {
+    width: 100%;
+    height: auto;
+  }
+
+  .style-2 .card--standard > .card__content .card__information {
+    padding-right: 2rem;
+    padding-left: 2rem;
+    background-color: #ffffff;
+  }
+
+  .style-2 .collection-gallery .collection-gallery-image {
+    padding-top: 0;
+  }
+
+  .style-2 .collection-gallery .collection-gallery-image > div:not(.collection__view-all) {
+    position: relative;
+  }
+
+  .collection-gallery .product-grid {
+    max-width: 100vw;
+  }
+
+  .style-3 .collection-gallery .collection-gallery-image > div img {
+    width: 100%;
+    height: auto;
+  }
+
+  .style-3 .h0 {
+    font-size: 3rem;
+  }
+
+  .looks-gallery {
+    padding-top: 1.5rem;
+  }
+}
+
+.test {
+  display: block;
+}

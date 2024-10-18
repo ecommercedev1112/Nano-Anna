@@ -1,0 +1,285 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "bcb87672-1a24-493f-b785-c72e9b8a108d": {
+      "type": "image-banner",
+      "blocks": {
+        "text_Mt6gxL": {
+          "type": "text",
+          "settings": {
+            "text": "Introducing",
+            "text_style": "caption-with-letter-spacing"
+          }
+        },
+        "heading_6q8zpH": {
+          "type": "heading",
+          "settings": {
+            "heading": "<em>Kathy Hilton x Anna Zuckerman<\/em>",
+            "heading_size": "h1"
+          }
+        },
+        "buttons_rUE7fB": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify:\/\/collections\/kathy-hilton",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "text_Mt6gxL",
+        "heading_6q8zpH",
+        "buttons_rUE7fB"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Hilton_Landing_Page_Banner.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "desktop_content_position": "bottom-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-4ff066f3-9d1b-47d7-afc1-5177f675bd4d",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false,
+        "advanced_styling": ""
+      }
+    },
+    "fed325d5-07df-41e2-ab13-e00511478826": {
+      "type": "image-banner",
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/IMG_6940_8x10_2.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false,
+        "advanced_styling": "banner-contained"
+      }
+    },
+    "featured_collection_LXBTfX": {
+      "type": "featured-collection",
+      "custom_css": [
+
+      ],
+      "settings": {
+        "title": "Kathy Hilton x Anna Zuckerman Collection",
+        "hd_title_h1": true,
+        "heading_size": "h2",
+        "description": "<p><\/p><p><a href=\"\/collections\/kathy-hilton\" title=\"Kathy Hilton x Anna Zuckerman\">View All<\/a><\/p>",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "kathy-hilton",
+        "products_to_show": 13,
+        "columns_desktop": 4,
+        "full_width": true,
+        "show_view_all": false,
+        "view_all_style": "link",
+        "enable_desktop_slider": true,
+        "color_scheme": "",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "advanced_styling": "",
+        "padding_top": 0,
+        "padding_bottom": 32
+      }
+    },
+    "7e8c59d2-f490-43cc-9a85-5a8001628770": {
+      "type": "rich-text",
+      "blocks": {
+        "button_9ByYj9": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Collection",
+            "button_link": "shopify:\/\/collections\/kathy-hilton",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        },
+        "template--16696334909677__7e8c59d2-f490-43cc-9a85-5a8001628770-168560686086ae94ed-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Introducing the Kathy Hilton x Anna Zuckerman Collection, which brings together Kathy's impeccable taste and Anna's eye for exquisite jewelry, with a capsule collection that showcases the spirit of two incredible women.  The collection highlights a selection of some of Kathy's favorite pieces, sharing her love of Anna Zuckerman's unmatched sparkle of diamond crystalline. Kathy is thrilled to join Anna and share pieces that are meant for every day, including the most special of occasions.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "button_9ByYj9",
+        "template--16696334909677__7e8c59d2-f490-43cc-9a85-5a8001628770-168560686086ae94ed-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-2",
+        "full_width": true,
+        "advanced_styling": "mw-800",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "6f71a640-ae03-4882-8742-e5ba3e5519bf": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--16696334909677__6f71a640-ae03-4882-8742-e5ba3e5519bf-1685606608a727f1b9-0": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<p>Introducing the Kathy Hilton x Anna Zuckerman Collection, which brings together Kathy's impeccable taste and Anna's eye for exquisite jewelry, with a capsule collection that showcases the spirit of two incredible women.  The collection highlights a selection of some of Kathy's favorite pieces, sharing her love of Anna Zuckerman's unmatched sparkle of diamond crystalline. Kathy is thrilled to join Anna and share pieces that are meant for every day, including the most special of occasions.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--16696334909677__6f71a640-ae03-4882-8742-e5ba3e5519bf-1685606608a727f1b9-1": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16696334909677__6f71a640-ae03-4882-8742-e5ba3e5519bf-1685606608a727f1b9-0",
+        "template--16696334909677__6f71a640-ae03-4882-8742-e5ba3e5519bf-1685606608a727f1b9-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "multi_title_h1": false,
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "portrait",
+        "columns_desktop": 1,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "Shop Collection",
+        "button_link": "shopify:\/\/collections\/kathy-hilton",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "advanced_styling": "section-multicolumn-about",
+        "padding_top": 32,
+        "padding_bottom": 0
+      }
+    },
+    "dec23454-b403-4d73-b3f4-8ce0c4b3f819": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16696334909677__dec23454-b403-4d73-b3f4-8ce0c4b3f819-1685608442037ecd57-1": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Explore our<em> jewelry collection<\/em><\/h2>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16696334909677__dec23454-b403-4d73-b3f4-8ce0c4b3f819-1685608442037ecd57-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "advanced_styling": "cta-text",
+        "padding_top": 40,
+        "padding_bottom": 20
+      }
+    },
+    "64b58857-8ebc-45af-8747-1459fd840e08": {
+      "type": "collection-list",
+      "blocks": {
+        "template--16696334909677__64b58857-8ebc-45af-8747-1459fd840e08-168560810084010091-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "rings"
+          }
+        },
+        "c27460f6-65ac-4658-9d39-3293d046a077": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "earrings"
+          }
+        },
+        "template--16696334909677__64b58857-8ebc-45af-8747-1459fd840e08-168560810084010091-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bracelets"
+          }
+        },
+        "template--16696334909677__64b58857-8ebc-45af-8747-1459fd840e08-168560810084010091-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "all-necklaces"
+          }
+        }
+      },
+      "block_order": [
+        "template--16696334909677__64b58857-8ebc-45af-8747-1459fd840e08-168560810084010091-0",
+        "c27460f6-65ac-4658-9d39-3293d046a077",
+        "template--16696334909677__64b58857-8ebc-45af-8747-1459fd840e08-168560810084010091-1",
+        "template--16696334909677__64b58857-8ebc-45af-8747-1459fd840e08-168560810084010091-2"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_ratio": "portrait",
+        "columns_desktop": 4,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "advanced_styling": "",
+        "padding_top": 36,
+        "padding_bottom": 40
+      }
+    },
+    "custom_liquid_eFbqL7": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<script>\nwindow.addEventListener('load', function() {\nvar _learnq = window._learnq || [];\nfunction addedToCart() {\n  fetch(`${window.location.origin}\/cart.js`)\n  .then(res => res.clone().json().then(data => {\n    var cart = {\n      total_price: data.total_price\/100,\n      $value: data.total_price\/100,\n      total_discount: data.total_discount,\n      original_total_price: data.original_total_price\/100,\n      items: data.items\n    }\n    if (item !== 'undefined') {\n      cart = Object.assign(cart, item)\n    }\n    if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', cart]);\n        klAjax = false;\n      }\n  }))\n};\n(function (ns, fetch) {\n  ns.fetch = function() {\n    const response = fetch.apply(this, arguments);\n    response.then(res => {\n      if (`${window.location.origin}\/cart\/add.js`\n      \t.includes(res.url)) {\n        \taddedToCart()\n      }\n    });\n    return response\n  }\n}(window, window.fetch));\nvar klAjax = true;\nvar atcButtons = document.querySelectorAll(\"form[action*='\/cart\/add'] button[type='submit']\");\nfor (var i = 0; i < atcButtons.length; i++) {\n    atcButtons[i].addEventListener(\"click\", function() {\n      if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', item]);\n        klAjax = false;\n      }\n    })\n}\n});\n<\/script>",
+        "color_scheme": "",
+        "advanced_styling": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "bcb87672-1a24-493f-b785-c72e9b8a108d",
+    "fed325d5-07df-41e2-ab13-e00511478826",
+    "featured_collection_LXBTfX",
+    "7e8c59d2-f490-43cc-9a85-5a8001628770",
+    "6f71a640-ae03-4882-8742-e5ba3e5519bf",
+    "dec23454-b403-4d73-b3f4-8ce0c4b3f819",
+    "64b58857-8ebc-45af-8747-1459fd840e08",
+    "custom_liquid_eFbqL7"
+  ]
+}

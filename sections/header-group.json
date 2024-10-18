@@ -1,0 +1,58 @@
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_KiiAk3": {
+          "type": "announcement",
+          "settings": {
+            "text": "Last Chance Collection - Enjoy an Additional 20% Off Already Reduced Prices",
+            "link": "https:\/\/annazuckerman.com\/collections\/last-call"
+          }
+        },
+        "announcement_cgeEAb": {
+          "type": "announcement",
+          "settings": {
+            "text": "Free Stud Earrings automatically added to cart with every purchase (*cannot be combined with other promotions)",
+            "link": "shopify:\/\/collections\/all-products-collection"
+          }
+        }
+      },
+      "block_order": [
+        "announcement_KiiAk3",
+        "announcement_cgeEAb"
+      ],
+      "settings": {
+        "color_scheme": "inverse",
+        "show_line_separator": true,
+        "show_social": false,
+        "auto_rotate": false,
+        "change_slides_speed": 5
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "logo_position": "middle-center",
+        "menu": "new-main-menu",
+        "menu_type_desktop": "drawer",
+        "sticky_header_type": "always",
+        "show_line_separator": false,
+        "color_scheme": "background-1",
+        "menu_color_scheme": "",
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "mobile_logo_position": "center",
+        "margin_bottom": 0,
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}

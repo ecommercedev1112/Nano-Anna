@@ -1,0 +1,197 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "bcb87672-1a24-493f-b785-c72e9b8a108d": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/close-up-of-a-blue-crystal-floating.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "advanced_styling": ""
+      }
+    },
+    "6f71a640-ae03-4882-8742-e5ba3e5519bf": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--16696334909677__6f71a640-ae03-4882-8742-e5ba3e5519bf-1685606608a727f1b9-0": {
+          "type": "column",
+          "settings": {
+            "title": "Diamond Crystalline, the most desired diamond alternative by Anna Zuckerman",
+            "text": "<p>Anna Zuckerman's mission is to define sustainable demi-fine jewelry by offering the same precious look and feel of luxury at an accessible price point while helping to reduce ecological damage and destruction from material wastage.<\/p><p>By repurposing salvaged lab-grown diamonds and gem materials that would otherwise go to waste, the Anna Zuckerman collection creates new beauty while extending the life cycle of existing materials through Diamond CrystallineTM, a man-made gem that is so remarkably similar in appearance to a genuine diamond; it takes a trained eye to spot the difference. <\/p><p>The process starts by hand selecting the highest-grade cubic zirconia and coating it with tiny particles of lab-grown diamonds, crystallizing the entire stone through a vaporization process of extreme heat and pressure conditions. The result ensures that the gems never get cloudy or foggy and always maintain a brilliant sparkle comparable to diamonds.<\/p><p>Anna Zuckerman offers Diamond Crystalline gems in a variety of colors, shapes, and sizes, providing customers with a wide range of options to choose from, crafted only in precious sterling silver finished with platinum or 18k gold.<\/p><p>The Anna Zuckerman Diamond Crystalline is not just a product but a symbol of progress and innovation. It represents a new way of thinking about luxury and sustainability, leading the way to a new era of luxury, free from the harmful effects of mining and destruction.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--16696334909677__6f71a640-ae03-4882-8742-e5ba3e5519bf-1685606608a727f1b9-1": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16696334909677__6f71a640-ae03-4882-8742-e5ba3e5519bf-1685606608a727f1b9-0",
+        "template--16696334909677__6f71a640-ae03-4882-8742-e5ba3e5519bf-1685606608a727f1b9-1"
+      ],
+      "settings": {
+        "title": "Our Process",
+        "multi_title_h1": true,
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "portrait",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "advanced_styling": "section-multicolumn-about",
+        "padding_top": 88,
+        "padding_bottom": 36
+      }
+    },
+    "fed325d5-07df-41e2-ab13-e00511478826": {
+      "type": "image-banner",
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/IMG_6940_8x10_2.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false,
+        "advanced_styling": "banner-contained"
+      }
+    },
+    "7e8c59d2-f490-43cc-9a85-5a8001628770": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16696334909677__7e8c59d2-f490-43cc-9a85-5a8001628770-168560686086ae94ed-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16696334909677__7e8c59d2-f490-43cc-9a85-5a8001628770-168560686086ae94ed-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "advanced_styling": "mw-400",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "dec23454-b403-4d73-b3f4-8ce0c4b3f819": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16696334909677__dec23454-b403-4d73-b3f4-8ce0c4b3f819-1685608442037ecd57-1": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Explore our<em> jewelry collection<\/em><\/h2>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16696334909677__dec23454-b403-4d73-b3f4-8ce0c4b3f819-1685608442037ecd57-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "advanced_styling": "cta-text",
+        "padding_top": 40,
+        "padding_bottom": 20
+      }
+    },
+    "64b58857-8ebc-45af-8747-1459fd840e08": {
+      "type": "collection-list",
+      "blocks": {
+        "template--16696334909677__64b58857-8ebc-45af-8747-1459fd840e08-168560810084010091-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "rings"
+          }
+        },
+        "c27460f6-65ac-4658-9d39-3293d046a077": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "earrings"
+          }
+        },
+        "template--16696334909677__64b58857-8ebc-45af-8747-1459fd840e08-168560810084010091-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bracelets"
+          }
+        },
+        "template--16696334909677__64b58857-8ebc-45af-8747-1459fd840e08-168560810084010091-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "all-necklaces"
+          }
+        }
+      },
+      "block_order": [
+        "template--16696334909677__64b58857-8ebc-45af-8747-1459fd840e08-168560810084010091-0",
+        "c27460f6-65ac-4658-9d39-3293d046a077",
+        "template--16696334909677__64b58857-8ebc-45af-8747-1459fd840e08-168560810084010091-1",
+        "template--16696334909677__64b58857-8ebc-45af-8747-1459fd840e08-168560810084010091-2"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_ratio": "portrait",
+        "columns_desktop": 4,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "advanced_styling": "",
+        "padding_top": 36,
+        "padding_bottom": 40
+      }
+    }
+  },
+  "order": [
+    "main",
+    "bcb87672-1a24-493f-b785-c72e9b8a108d",
+    "6f71a640-ae03-4882-8742-e5ba3e5519bf",
+    "fed325d5-07df-41e2-ab13-e00511478826",
+    "7e8c59d2-f490-43cc-9a85-5a8001628770",
+    "dec23454-b403-4d73-b3f4-8ce0c4b3f819",
+    "64b58857-8ebc-45af-8747-1459fd840e08"
+  ]
+}

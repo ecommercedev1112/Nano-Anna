@@ -1,0 +1,73 @@
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "footer-0": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Shop",
+            "menu": "new-footer-shop"
+          }
+        },
+        "footer-1": {
+          "type": "link_list",
+          "settings": {
+            "heading": "About us",
+            "menu": "new-footer-about-us"
+          }
+        },
+        "18770b6a-084d-4773-8759-c85e01b05263": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Customer care",
+            "menu": "new-footer-customer"
+          }
+        },
+        "e8c37440-400a-40c5-a3c1-3e517b0b9822": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Follow us",
+            "menu": "new-footer-socials"
+          }
+        },
+        "01c0dcb7-72f0-4557-be82-a869c86888d1": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Legal",
+            "menu": "new-footer-policies"
+          }
+        }
+      },
+      "block_order": [
+        "footer-0",
+        "footer-1",
+        "18770b6a-084d-4773-8759-c85e01b05263",
+        "e8c37440-400a-40c5-a3c1-3e517b0b9822",
+        "01c0dcb7-72f0-4557-be82-a869c86888d1"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "color_scheme": "background-2",
+        "newsletter_enable": true,
+        "newsletter_heading": "Subscribe",
+        "enable_follow_on_shop": false,
+        "show_social": false,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "payment_enable": false,
+        "show_policy": false,
+        "margin_top": 0,
+        "padding_top": 92,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}
