@@ -149,7 +149,7 @@ function onKeyUpEscape(event) {
   const summaryElement = openDetailsElement.querySelector('summary');
   openDetailsElement.removeAttribute('open');
   summaryElement.setAttribute('aria-expanded', false);
-  summaryElement.focus();
+  summaryElement.focus(); 
 }
 
 class QuantityInput extends HTMLElement {
@@ -411,6 +411,7 @@ class MenuDrawer extends HTMLElement {
     this.mainDetailsToggle.querySelectorAll('details').forEach((details) => {
       details.removeAttribute('open');
       details.classList.remove('menu-opening');
+      document.querySelector('.facets-outer-wrapper').classList.remove('show-bar');
     });
     this.mainDetailsToggle.querySelectorAll('.submenu-open').forEach((submenu) => {
       submenu.classList.remove('submenu-open');
@@ -457,6 +458,7 @@ class MenuDrawer extends HTMLElement {
         window.requestAnimationFrame(handleAnimation);
       } else {
         detailsElement.removeAttribute('open');
+        document.querySelector('.facets-outer-wrapper').classList.remove('show-bar');
         if (detailsElement.closest('details[open]')) {
           trapFocus(detailsElement.closest('details[open]'), detailsElement.querySelector('summary'));
         }

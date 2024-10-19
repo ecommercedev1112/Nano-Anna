@@ -79,6 +79,9 @@
         >
           <div id="CartDrawer-CartItems" class="drawer__contents js-contents">
             {%- if cart != empty -%}
+              {% if cart != empty and settings.show_shipping_bar %}
+                {% render "cart-drawer-tracker" %}
+              {% endif %}
               <div class="drawer__cart-items-wrapper">
                 <table class="cart-items" role="table">
                   <thead role="rowgroup">

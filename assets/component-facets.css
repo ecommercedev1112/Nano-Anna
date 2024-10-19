@@ -343,6 +343,7 @@
 .facets__price {
   display: flex;
   padding: 2rem;
+  padding-bottom: 0;
 }
 
 .facets__price .field + .field-currency {
@@ -617,6 +618,7 @@ a.active-facets__button.focused .active-facets__button-inner,
 
 .mobile-facets__info {
   padding: 0 2.6rem;
+  display: none;
 }
 
 .mobile-facets__heading {
@@ -782,7 +784,7 @@ details.menu-opening .mobile-facets__close svg {
   left: 0;
   z-index: 3;
   transform: translateX(100%);
-  visibility: hidden;
+  visibility: visible;
   display: flex;
   flex-direction: column;
 }
@@ -792,6 +794,11 @@ details.menu-opening .mobile-facets__close svg {
 }
 
 .js details[open].menu-opening > .mobile-facets__submenu {
+  transform: translateX(0);
+  visibility: visible;
+}
+
+.js div[open].menu-opening > .mobile-facets__submenu {
   transform: translateX(0);
   visibility: visible;
 }
@@ -839,7 +846,7 @@ input.mobile-facets__checkbox {
 
 .mobile-facets__label .icon-checkmark {
   position: absolute;
-  top: 1.9rem;
+  top: 1.4rem;
   left: 2.8rem;
   visibility: hidden;
 }
@@ -1108,6 +1115,9 @@ input.mobile-facets__checkbox {
 .facets-outer-wrapper {
   width: 100%;
   display: inline-block;
+}
+.facets-outer-wrapper.show-bar {
+  z-index: 4 !important;
 }
 
 .facets-outer-container {

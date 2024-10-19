@@ -9,7 +9,7 @@
   <details id="Details-menu-drawer-container" class="menu-drawer-container">
     <summary
       class="header__icon header__icon--menu header__icon--summary link focus-inset"
-      aria-label="{{ 'sections.header.menu' | t }}"
+      aria-label="{{ 'sections.header.menu' | t }}" id="icon__drawer-menu"
     >
       <span>
         {% render 'icon-hamburger' %}
@@ -329,8 +329,14 @@
 <script>
   const menu_drawer_close = document.querySelector('#menu-drawer-close');
   const header = document.querySelector('.section-header');
+  const menuDrawer = document.querySelector('#icon__drawer-menu');
+
+  menuDrawer.addEventListener('click', () => {
+    document.querySelector('.facets-outer-wrapper').classList.add('show-bar');
+  })
 
   menu_drawer_close.addEventListener('click', () => {
+    document.querySelector('.facets-outer-wrapper').classList.remove('show-bar');
     document.getElementById('Details-menu-drawer-container').removeAttribute('open');
     document.getElementById('Details-menu-drawer-container').classList.remove('menu-opening');
 
@@ -344,4 +350,5 @@
     document.body.classList.remove(`overflow-hidden-${breakpoint}`);
     header.classList.remove('menu-open');
   });
+
 </script>

@@ -114,7 +114,7 @@
               {%- assign total_active_values = total_active_values | plus: filter.active_values.size -%}
               {% case filter.type %}
                 {% when 'boolean', 'list' %}
-                  <details
+                  <div
                     id="Details-{{ forloop.index }}-{{ section.id }}"
                     class="{% if filter_type == 'horizontal' %}disclosure-has-popup facets__disclosure{% else %} facets__disclosure-vertical{% endif %} js-filter"
                     data-index="{{ forloop.index }}"
@@ -632,7 +632,7 @@
                 {%- for filter in results.filters -%}
                   {% case filter.type %}
                     {% when 'boolean', 'list' %}
-                      <details
+                      <div
                         id="Details-Mobile-{{ forloop.index }}-{{ section.id }}"
                         class="mobile-facets__details js-filter menu-opening"
                         data-index="mobile-{{ forloop.index }}"
@@ -750,9 +750,9 @@
                             >
                           </div>
                         </div>
-                      </details>
+                      </div>
                     {% when 'price_range' %}
-                      <details
+                      <div
                         id="Details-Mobile-{{ forloop.index }}-{{ section.id }}"
                         class="mobile-facets__details js-filter"
                         data-index="mobile-{{ forloop.index }}"
@@ -860,7 +860,7 @@
                             >
                           </div>
                         </div>
-                      </details>
+                      </div>
                   {% endcase %}
                 {%- endfor -%}
               {%- endif -%}

@@ -114,6 +114,9 @@
     "show_vendor": false,
     "show_cart_note": true,
     "cart_drawer_collection": "",
+    "show_shipping_bar": true,
+    "minimum_free_shipping": 100,
+    "shipping_bar_color": "#000000",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
