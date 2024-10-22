@@ -802,7 +802,6 @@ details.menu-opening .mobile-facets__close svg {
   transform: translateX(0);
   visibility: visible;
 }
-
 .js .menu-drawer__submenu .mobile-facets__submenu {
   overflow-y: auto;
 }
@@ -846,7 +845,7 @@ input.mobile-facets__checkbox {
 
 .mobile-facets__label .icon-checkmark {
   position: absolute;
-  top: 1.4rem;
+  top: 14px;
   left: 2.8rem;
   visibility: hidden;
 }
@@ -1116,6 +1115,7 @@ input.mobile-facets__checkbox {
   width: 100%;
   display: inline-block;
 }
+
 .facets-outer-wrapper.show-bar {
   z-index: 4 !important;
 }

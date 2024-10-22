@@ -330,9 +330,8 @@
   const menu_drawer_close = document.querySelector('#menu-drawer-close');
   const header = document.querySelector('.section-header');
   const menuDrawer = document.querySelector('#icon__drawer-menu');
-
   menuDrawer.addEventListener('click', () => {
-    document.querySelector('.facets-outer-wrapper').classList.add('show-bar');
+    document.querySelector('.facets-outer-wrapper').classList.toggle('show-bar');
   })
 
   menu_drawer_close.addEventListener('click', () => {
@@ -350,5 +349,4 @@
     document.body.classList.remove(`overflow-hidden-${breakpoint}`);
     header.classList.remove('menu-open');
   });
-
 </script>
